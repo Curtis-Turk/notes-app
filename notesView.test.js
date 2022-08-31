@@ -3,13 +3,21 @@
  */
 
 const fs = require("fs");
+const NotesModel = require("./notesModel");
 const NotesView = require("./notesView");
 
 describe("Page view", () => {
-  it("displays the title", () => {
+  beforeEach(() => {
     document.body.innerHTML = fs.readFileSync("./index.html");
-    const view = new NotesView();
+  });
+  it("displays the notes", () => {
+    const model = new NotesModel();
+    model.addNote("first note");
+    model.addNote("second note");
+    const view = new NotesView(model);
 
-    expect(document.querySelectorAll("h1").length.toBe(1));
+    view.displayNotes();
+
+    expect(document.querySelectorAll(".note").length).toBe(2);
   });
 });
