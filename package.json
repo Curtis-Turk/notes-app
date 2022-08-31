@@ -1,7 +1,6 @@
 {
   "name": "notes-app",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,5 +8,18 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Curtis-Turk/notes-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Curtis-Turk/notes-app/issues"
+  },
+  "homepage": "https://github.com/Curtis-Turk/notes-app#readme",
+  "description": "",
+  "dependencies": {
+    "esbuild": "^0.15.6",
+    "jest-environment-jsdom": "^29.0.1"
+  }
 }
